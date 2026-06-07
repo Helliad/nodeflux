@@ -57,8 +57,11 @@ const schema = z
 export function ContactForm() {
   const [status, setStatus] = useState<FormStatus>("idle");
 
+  const initialSubject =
+    typeof window !== "undefined" ? new URLSearchParams(window.location.search).get("subject") ?? "" : "";
+
   const form = useForm<FormState>({
-    defaultValues: { name: "", phone: "", email: "", subject: "", message: "", agreement: true },
+    defaultValues: { name: "", phone: "", email: "", subject: initialSubject, message: "", agreement: true },
     resolver: zodResolver(schema),
   });
 

@@ -30,7 +30,7 @@ const testimonials: Card[] = [
   {
     id: "2",
     content:
-      "NodeFlux’s automation services have completely transformed our business. Their team quickly spotted areas where we could boost efficiency and automate all the tedious tasks that were slowing us down. In just three months, we’ve seen incredible results — saving both time and money. Honestly, we couldn’t be happier!",
+      "NodeFlux’s automation services have completely transformed our business. Their team quickly spotted areas where we could boost efficiency and automate all the tedious tasks that were slowing us down. In just three months, we’ve seen incredible results, saving both time and money. Honestly, we couldn’t be happier!",
     name: "Michael Wong",
     designation: "Operations Supervisor",
     rating: 5,

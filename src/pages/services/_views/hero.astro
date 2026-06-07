@@ -4,9 +4,6 @@ import { MaskedHeading } from "@/components/typography/masked-heading";
 import website from "@/assets/images/services/website.png";
 import mobile from "@/assets/images/services/mobile.png";
 import branding from "@/assets/images/services/branding.png";
-import graphicdesign from "@/assets/images/services/graphic-design.png";
-import socialmedia from "@/assets/images/services/social-media.png";
-import automation from "@/assets/images/services/automation.png";
 import enterprise from "@/assets/images/services/enterprise.png";
 ---
 
@@ -14,7 +11,7 @@ import enterprise from "@/assets/images/services/enterprise.png";
   <div class="container">
     <div class="flex flex-col items-center">
       <MaskedHeading className="animate-slide-in opacity-0 max-w-4xl text-5xl">Our Services and Products</MaskedHeading>
-      <div class="grid grid-cols-12 md:grid-rows-12 md:h-[50rem] w-full max-w-[72rem] gap-6 mt-16">
+      <div class="grid grid-cols-12 md:grid-rows-8 md:h-[34rem] w-full max-w-[72rem] gap-6 mt-16">
         <article class="animate-slide-in opacity-0 [--slide-in-delay:150ms] col-span-12 md:col-span-3 md:row-span-8 bg-card rounded-xl text-center px-6 py-8 flex flex-col gap-1.5 border relative overflow-hidden">
           <img src={branding.src} alt="Example of branding service we would provide" class="absolute top-0 left-0" />
           <div class="absolute inset-0 bg-gradient-to-b from-transparent via-background/75 to-background/90"/>
@@ -30,34 +27,16 @@ import enterprise from "@/assets/images/services/enterprise.png";
         <article
           class="animate-slide-in opacity-0 [--slide-in-delay:250ms] col-span-12 md:col-span-6 md:row-span-4 row-start-auto md:row-star-5 col-start-auto md:col-start-4 bg-card rounded-xl text-right py-6 px-8 flex flex-col justify-center items-end gap-1.5 border relative overflow-hidden"
         >
-          <img src={graphicdesign.src} alt="Graphic design example of what we would provide" class="absolute top-1/2 -translate-y-1/2 left-4 h-[75%] w-auto" />
+          <img src={enterprise.src} alt="Example of what we would provide for enterprise solutions" class="absolute top-1/2 -translate-y-1/2 left-4 h-[75%] w-auto" />
           <div class="absolute inset-0 bg-gradient-to-r from-transparent via-background/75 to-background/90"/>
-          <h3 class="text-xl font-medium text-foreground z-10">Graphic Design</h3>
-          <p class="z-10 text-sm text-foreground/75 max-w-64">Graphic design team creates logos, marketing materials, website graphics, and social media content for a consistent visual identity.</p>
+          <h3 class="text-xl font-medium text-foreground z-10">Enterprise Applications</h3>
+          <p class="z-10 text-sm text-foreground/75 max-w-64">Expert in full-stack development for custom software solutions, responsive design, comprehensive upgrades, and code audits.</p>
         </article>
         <article class="animate-slide-in opacity-0 [--slide-in-delay:300ms] col-span-12 md:col-span-3 md:row-span-8 row-start-auto md:row-start-1 col-start-auto md:col-start-10 bg-card rounded-xl text-center px-6 py-8 flex flex-col gap-1.5 border relative overflow-hidden">
           <img src={mobile.src} alt="Example of what we would provide for mobile services" class="absolute top-4 right-0 w-11/12 h-auto" />
           <div class="absolute inset-0 bg-gradient-to-b from-transparent via-background/75 to-background/90"/>
           <h3 class="text-xl font-medium mt-auto text-foreground z-10">Mobile Applications</h3>
           <p class="z-10 text-sm text-foreground/75">High-quality iOS and Android apps with platform-specific languages, rigorous testing, and ongoing maintenance ensure seamless functionality.</p>
-        </article>
-        <article class="animate-slide-in opacity-0 [--slide-in-delay:350ms] col-span-12 md:col-span-4 md:row-span-4 bg-card rounded-xl text-center px-6 py-6 flex flex-col gap-1.5 border relative overflow-hidden">
-          <img src={enterprise.src} alt="Example of what we would provide for enterprise solutions" class="absolute top-4 left-1/2 -translate-x-1/2" />
-          <div class="absolute inset-0 bg-gradient-to-b from-transparent via-background/75 to-background/90"/>
-          <h3 class="text-xl font-medium mt-auto text-foreground z-10">Enterprise Applications</h3>
-          <p class="z-10 text-sm text-foreground/75">Expert in full-stack development for custom software solutions, responsive design, comprehensive upgrades, and code audits.</p>
-        </article>
-        <article class="animate-slide-in opacity-0 [--slide-in-delay:400ms] col-span-12 md:col-span-4 md:row-span-4 bg-card rounded-xl text-center px-6 py-6 flex flex-col gap-1.5 border relative overflow-hidden">
-          <img src={socialmedia.src} alt="Example of what we would provide for social media" class="absolute top-4 left-1/2 -translate-x-1/2" />
-          <div class="absolute inset-0 bg-gradient-to-b from-transparent via-background/75 to-background/90"/>
-          <h3 class="text-xl font-medium mt-auto text-foreground z-10">Social Media Managers</h3>
-          <p class="z-10 text-sm text-foreground/75">Results-driven social media strategy elevates your brand narrative and fosters audience engagement from awareness to conversion.</p>
-        </article>
-        <article class="animate-slide-in opacity-0 [--slide-in-delay:350ms] col-span-12 md:col-span-4 md:row-span-4 bg-card rounded-xl text-center px-6 py-6 flex flex-col gap-1.5 border relative overflow-hidden">
-          <img src={automation.src} alt="Example of what we would provide for automation" class="absolute top-4 left-1/2 -translate-x-1/2" />
-          <div class="absolute inset-0 bg-gradient-to-b from-transparent via-background/75 to-background/90"/>
-          <h3 class="text-xl font-medium mt-auto text-foreground z-10">Automation</h3>
-          <p class="z-10 text-sm text-foreground/75">Automating Excel spreadsheets with VBA macros, formulas, and pivot tables streamlines data processing and visualization tasks.</p>
         </article>
       </div>
     </div>

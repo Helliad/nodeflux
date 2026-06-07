@@ -1,0 +1,155 @@
+---
+import Layout from "@/layouts/layout.astro";
+import Banner from "@/pages/_views/banner.astro";
+import { MaskedHeading } from "@/components/typography/masked-heading";
+import { ArrowRightIcon, BookOpenIcon, ClockIcon } from "lucide-react";
+
+const posts = [
+  {
+    title: "How Much Does a Website Cost in Singapore in 2026? A No-BS Pricing Breakdown for SMEs",
+    excerpt:
+      "Honest SGD pricing for templates, custom builds, and full web apps, plus the hidden costs (hosting, content, maintenance) that turn a S$1,500 quote into a S$4,000 bill.",
+    href: "/blog/website-cost-singapore-2026",
+    tag: "Pricing",
+    tagColor: "#03cc00",
+    readTime: "8 min read",
+    status: "Coming Soon",
+  },
+  {
+    title: "Do I Need a Mobile App for My Business? An Honest Guide for Singapore SMEs",
+    excerpt:
+      "Most SMEs don't need a native app. They need a responsive site or a PWA. Four questions that decide it, real local examples, and what a Singapore app actually costs to build and maintain.",
+    href: "/blog/do-i-need-a-mobile-app-singapore",
+    tag: "Strategy",
+    tagColor: "#6eaaff",
+    readTime: "7 min read",
+    status: "Coming Soon",
+  },
+  {
+    title: "PSG Grant for Websites in Singapore (2026): Eligibility, Process, and What to Watch For",
+    excerpt:
+      "Who qualifies, how to apply, and the cashflow catch nobody mentions: a clear walkthrough of the Productivity Solutions Grant for SMEs looking to subsidise their website or digital build.",
+    href: "/blog/psg-grant-website-singapore-2026",
+    tag: "Grants",
+    tagColor: "#B73DFC",
+    readTime: "7 min read",
+    status: "Coming Soon",
+  },
+];
+---
+
+<Layout
+  title="Blog | Honest Guides for Singapore SMEs | NodeFlux Pte. Ltd."
+  description="Straight-talking guides on websites, mobile apps, and digital strategy for Singapore SMEs. Real pricing, grant info, and the questions to ask before you spend a dollar."
+>
+  <section id="blog-hero">
+    <div class="container">
+      <div class="flex flex-col items-center max-w-3xl mx-auto">
+        <div class="animate-slide-in opacity-0 inline-flex items-center gap-2 px-4 py-2 mb-10 rounded-full ring-1 ring-white/10 bg-white/5 backdrop-blur-sm">
+          <BookOpenIcon className="h-4 w-4 text-[#c257ff]" />
+          <span class="text-sm font-medium text-foreground/90">The NodeFlux Blog</span>
+        </div>
+        <MaskedHeading
+          className="animate-slide-in [--slide-in-delay:75ms] opacity-0 text-4xl sm:text-5xl lg:text-6xl leading-[1.1]"
+        >
+          Honest guides for Singapore SMEs.
+        </MaskedHeading>
+        <p
+          class="animate-slide-in [--slide-in-delay:150ms] opacity-0 text-foreground/75 text-center text-lg font-normal mt-10"
+        >
+          No fluff, no jargon, no sales pitch dressed up as advice. Real pricing, real tradeoffs, and the questions
+          to ask before you spend a dollar on a website, app, or digital tool.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog-posts" class="mt-24 sm:mt-32 group" data-state="invisible">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {
+          posts.map((post, index) => (
+            <article
+              class="group-data-[state=visible]:animate-slide-in opacity-0 bg-card rounded-2xl border p-8 flex flex-col gap-5 relative overflow-hidden hover:ring-1 hover:ring-white/20 transition-all"
+              style={`--slide-in-delay: ${index * 100}ms`}
+            >
+              <div class="flex items-center justify-between">
+                <span
+                  class="text-[0.625rem] font-bold tracking-wider px-2.5 py-1 rounded-full"
+                  style={`background-color: ${post.tagColor}; color: #000;`}
+                >
+                  {post.tag.toUpperCase()}
+                </span>
+                <span class="text-[0.625rem] font-bold tracking-wider bg-white/10 text-foreground/80 px-2.5 py-1 rounded-full">
+                  {post.status.toUpperCase()}
+                </span>
+              </div>
+              <h2 class="text-xl font-semibold leading-snug text-foreground">
+                {post.title}
+              </h2>
+              <p class="text-sm text-foreground/70 leading-relaxed">{post.excerpt}</p>
+              <div class="h-px shrink-0 bg-border mt-auto" />
+              <div class="flex items-center justify-between">
+                <div class="inline-flex items-center gap-1.5 text-xs text-foreground/60">
+                  <ClockIcon className="h-3.5 w-3.5" />
+                  <span>{post.readTime}</span>
+                </div>
+                <span class="inline-flex items-center gap-1.5 text-sm text-foreground/50">
+                  <span>Coming soon</span>
+                </span>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section id="blog-newsletter" class="mt-24 sm:mt-32 group" data-state="invisible">
+    <div class="container">
+      <div
+        class="group-data-[state=visible]:animate-slide-in opacity-0 max-w-3xl mx-auto bg-card rounded-2xl border p-10 flex flex-col items-center text-center"
+      >
+        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#c257ff] mb-3">Want it sooner?</p>
+        <h2 class="text-2xl sm:text-3xl font-semibold leading-tight">
+          Send us your question. We'll write the article for it.
+        </h2>
+        <p class="text-foreground/75 mt-4 mb-8 max-w-xl">
+          If you're trying to figure out what to build, how much it'll cost, or whether you qualify for a grant,
+          just ask. Most of these articles started as a real conversation with a Singapore business owner.
+        </p>
+        <a
+          href="/contact"
+          class="inline-flex items-center gap-2 group/cta h-12 px-6 rounded-full ring-1 ring-white/15 hover:ring-white/30 hover:bg-white/5 transition-colors font-semibold text-foreground"
+        >
+          <span>Ask a question</span>
+          <div class="h-5 w-5 overflow-hidden">
+            <div class="flex transition-transform duration-500 -translate-x-5 group-hover/cta:translate-x-0">
+              <ArrowRightIcon className="h-5 w-5 -rotate-45 shrink-0" />
+              <ArrowRightIcon className="h-5 w-5 -rotate-45 shrink-0" />
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Banner />
+</Layout>
+
+<script>
+  ["blog-posts", "blog-newsletter"].forEach((id) => {
+    const element = document.getElementById(id);
+    if (!element) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          element.dataset.state = "visible";
+          observer.unobserve(element);
+        }
+      },
+      { threshold: 0.1 }
+    );
+    observer.observe(element);
+  });
+</script>

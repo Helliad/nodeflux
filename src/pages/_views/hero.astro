@@ -1,22 +1,25 @@
 ---
-import { ArrowRightIcon } from "lucide-react";
+import { ArrowRightIcon, MapPinIcon } from "lucide-react";
 import { MaskedHeading } from "@/components/typography/masked-heading";
 
-import founder from "@/assets/images/home/founder.png";
-import google from "@/assets/images/home/google-icon.png";
+import abhay from "@/assets/images/home/abhay.jpg";
 import shiv from "@/assets/images/review/ShivKamdar.png";
 ---
 
 <section id="hero" class="flex flex-col gap-16">
   <div class="container">
     <div class="flex flex-col items-center">
-      <MaskedHeading className="animate-slide-in opacity-0 max-w-4xl text-5xl sm:text-7xl lg:text-[5.5rem] leading-[1.1]"
-        >Elevating businesses to the next level.</MaskedHeading
+      <div class="animate-slide-in opacity-0 inline-flex items-center gap-2 px-4 py-2 mb-10 rounded-full ring-1 ring-white/10 bg-white/5 backdrop-blur-sm">
+        <MapPinIcon className="h-4 w-4 text-[#c257ff]" />
+        <span class="text-sm font-medium text-foreground/90">Based in Singapore</span>
+      </div>
+      <MaskedHeading className="animate-slide-in [--slide-in-delay:75ms] opacity-0 whitespace-nowrap text-4xl sm:text-6xl lg:text-7xl xl:text-[5rem] leading-[1.1]"
+        >Build for what comes next.</MaskedHeading
       >
-      <p class="animate-slide-in [--slide-in-delay:150ms] opacity-0 text-foreground/80 max-w-xl text-center text-lg font-normal mt-6 mb-10">
-        Bringing win-win strategies to the table for proactive domination and a new normal in digital excellence.
+      <p class="animate-slide-in [--slide-in-delay:150ms] opacity-0 text-foreground/80 max-w-2xl text-center text-lg font-normal mt-16 mb-20">
+        We elevate your business through custom websites, applications, branding and more.
       </p>
-      <div class="flex flex-col sm:flex-row items-center gap-8 animate-slide-in [--slide-in-delay:250ms] opacity-0">
+      <div class="flex flex-col sm:flex-row items-center gap-6 animate-slide-in [--slide-in-delay:250ms] opacity-0">
         <div class="relative group/button">
           <div
             class="absolute transition-all duration-150 opacity-0 inset-px bg-[#c257ff] rounded-xl blur-lg group-hover/button:opacity-60 group-hover/button:-inset-px group-hover/button:duration-300 z-0"
@@ -39,31 +42,41 @@ import shiv from "@/assets/images/review/ShivKamdar.png";
       </div>
     </div>
   </div>
-  <div class="relative overflow-hidden container max-w-screen-2xl">
-    <div
-      class="animate-slide-in [--slide-in-delay:350ms] opacity-0 shadow-[inset_0_0_2px_15px_#141414] sm:shadow-[inset_0_0_2px_40px_#141414] bg-hero-pattern min-h-60 sm:min-h-96 lg:min-h-[28rem] xl:min-h-[36rem] w-full rounded-full bg-center bg-no-repeat bg-auto mt-16 flex items-center px-28 justify-between"
-    >
-      <div class="hidden md:flex flex-col items-center gap-4">
+  <div class="container max-w-6xl mt-16">
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-center">
+      <div class="animate-slide-in [--slide-in-delay:350ms] opacity-0 lg:col-span-2 relative">
+        <div class="absolute inset-0 -m-6 bg-[#c257ff]/20 rounded-3xl blur-3xl"></div>
         <img
-          src="https://cdn.prod.website-files.com/65b815fb8b11393078dd199d/65b92bd534c9e4af4d859923_star%20rate%20icon.svg"
-          alt="Google Stars"
+          src={abhay.src}
+          alt="Abhay, Founder of NodeFlux"
+          class="relative w-full aspect-square object-cover rounded-3xl ring-1 ring-white/10"
         />
-        <p class="italic">4.6 out of 5 based on 18 reviews</p>
-        <img src={google.src} alt="Google Logo" class="h-12 w-auto" />
       </div>
-      <div class="hidden md:flex flex-col gap-4 max-w-80">
-        <p class="italic">“They turned our digital vision into reality with an impressive website that just WOWs our customers”</p>
-        <div class="flex items-center gap-4">
-          <img src={shiv.src} alt="Shiv Image" />
-          <div class="text-sm flex flex-col gap-0.5">
-            <strong>Shiv Kamdar</strong>
-            <span>Founder of Shiv Kamdar Events</span>
+      <div class="animate-slide-in [--slide-in-delay:500ms] opacity-0 lg:col-span-3 flex flex-col gap-6">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#c257ff] mb-3">A note from the founder</p>
+          <h2 class="text-3xl sm:text-4xl font-semibold leading-tight">
+            Built by a Singapore founder who actually picks up the phone.
+          </h2>
+        </div>
+        <p class="text-foreground/75 text-lg leading-relaxed">
+          I'm Abhay. I started NodeFlux because too many local businesses get handed cookie-cutter templates and ghosted after launch.
+          Whether you need a website, an app, or full branding, you work directly with me from kickoff to handover. No agency layers, no
+          vague timelines, just clear work and honest pricing.
+        </p>
+        <div class="bg-card border rounded-xl p-6 flex flex-col gap-4 mt-2">
+          <p class="italic text-foreground/85">
+            “They turned our digital vision into reality with an impressive website that just WOWs our customers”
+          </p>
+          <div class="flex items-center gap-4">
+            <img src={shiv.src} alt="Shiv Kamdar" class="h-10 w-10 rounded-full object-cover" />
+            <div class="text-sm flex flex-col gap-0.5">
+              <strong>Shiv Kamdar</strong>
+              <span class="text-foreground/60">Founder of Shiv Kamdar Events</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="animate-slide-in [--slide-in-delay:750ms] opacity-0 absolute inset-0 bottom-4 sm:bottom-10 flex justify-center">
-      <img src={founder.src} alt="Abhay Photo" class="h-full w-auto" />
     </div>
   </div>
 </section>

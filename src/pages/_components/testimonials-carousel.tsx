@@ -95,7 +95,7 @@ const scaleFactor = 0.06;
 
 function CardStack() {
   const [cards, setCards] = useState<Card[]>(testimonials);
-  const interval = useRef<NodeJS.Timer>();
+  const interval = useRef<ReturnType<typeof setInterval>>();
 
   const startFlipping = useCallback(() => {
     interval.current = setInterval(() => {

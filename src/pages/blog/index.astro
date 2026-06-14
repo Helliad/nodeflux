@@ -13,7 +13,8 @@ const posts = [
     tag: "Pricing",
     tagColor: "#03cc00",
     readTime: "8 min read",
-    status: "Coming Soon",
+    status: "New",
+    published: true,
   },
   {
     title: "Do I Need a Mobile App for My Business? An Honest Guide for Singapore SMEs",
@@ -23,7 +24,8 @@ const posts = [
     tag: "Strategy",
     tagColor: "#6eaaff",
     readTime: "7 min read",
-    status: "Coming Soon",
+    status: "New",
+    published: true,
   },
   {
     title: "PSG Grant for Websites in Singapore (2026): Eligibility, Process, and What to Watch For",
@@ -73,6 +75,7 @@ const posts = [
               class="group-data-[state=visible]:animate-slide-in opacity-0 bg-card rounded-2xl border p-8 flex flex-col gap-5 relative overflow-hidden hover:ring-1 hover:ring-white/20 transition-all"
               style={`--slide-in-delay: ${index * 100}ms`}
             >
+              {post.published && <a href={post.href} class="absolute inset-0 z-10" aria-label={post.title} />}
               <div class="flex items-center justify-between">
                 <span
                   class="text-[0.625rem] font-bold tracking-wider px-2.5 py-1 rounded-full"
@@ -94,9 +97,18 @@ const posts = [
                   <ClockIcon className="h-3.5 w-3.5" />
                   <span>{post.readTime}</span>
                 </div>
-                <span class="inline-flex items-center gap-1.5 text-sm text-foreground/50">
-                  <span>Coming soon</span>
-                </span>
+                {
+                  post.published ? (
+                    <span class="inline-flex items-center gap-1.5 text-sm font-medium text-foreground/90">
+                      <span>Read article</span>
+                      <ArrowRightIcon className="h-4 w-4 -rotate-45" />
+                    </span>
+                  ) : (
+                    <span class="inline-flex items-center gap-1.5 text-sm text-foreground/50">
+                      <span>Coming soon</span>
+                    </span>
+                  )
+                }
               </div>
             </article>
           ))

@@ -1,5 +1,4 @@
 import * as z from "zod";
-import Lottie from "lottie-web";
 
 import { Fragment, useEffect, useRef, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
@@ -306,17 +305,22 @@ function AnimatedCheckIcon() {
 
   useEffect(() => {
     if (!ref.current) return;
-    const item = Lottie.loadAnimation({
-      name: "animated-check",
-      container: ref.current,
-      renderer: "svg",
-      loop: false,
-      autoplay: false,
-      animationData: AnimatedCheck,
+    let item: ReturnType<(typeof import("lottie-web"))["default"]["loadAnimation"]> | undefined;
+    const timeout = setTimeout(() => item?.play(), 300);
+    import("lottie-web").then(({ default: Lottie }) => {
+      if (!ref.current) return;
+      item = Lottie.loadAnimation({
+        name: "animated-check",
+        container: ref.current,
+        renderer: "svg",
+        loop: false,
+        autoplay: false,
+        animationData: AnimatedCheck,
+      });
     });
-    setTimeout(() => item.play(), 300);
     return () => {
-      item.destroy("animated-check");
+      clearTimeout(timeout);
+      item?.destroy("animated-check");
     };
   }, [ref]);
 
@@ -328,17 +332,22 @@ function AnimatedCrossIcon() {
 
   useEffect(() => {
     if (!ref.current) return;
-    const item = Lottie.loadAnimation({
-      name: "animated-cross",
-      container: ref.current,
-      renderer: "svg",
-      loop: false,
-      autoplay: false,
-      animationData: AnimatedCross,
+    let item: ReturnType<(typeof import("lottie-web"))["default"]["loadAnimation"]> | undefined;
+    const timeout = setTimeout(() => item?.play(), 300);
+    import("lottie-web").then(({ default: Lottie }) => {
+      if (!ref.current) return;
+      item = Lottie.loadAnimation({
+        name: "animated-cross",
+        container: ref.current,
+        renderer: "svg",
+        loop: false,
+        autoplay: false,
+        animationData: AnimatedCross,
+      });
     });
-    setTimeout(() => item.play(), 300);
     return () => {
-      item.destroy("animated-cross");
+      clearTimeout(timeout);
+      item?.destroy("animated-cross");
     };
   }, [ref]);
 

@@ -3,10 +3,11 @@ import { motion } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Stars } from "./stars";
 
-import jiaxin from "@/assets/images/review/JiaXin.png";
-import michael from "@/assets/images/review/Michael.png";
-import ragesh from "@/assets/images/review/Rageshwaran.png";
-import sarah from "@/assets/images/review/Sarah.png";
+import jaden from "@/assets/images/review/Jaden.png";
+import nigel from "@/assets/images/review/NigelKoh.png";
+import akash from "@/assets/images/review/akash.jpg";
+import bakul from "@/assets/images/review/bakul.jpg";
+import noprofile from "@/assets/images/review/noprofile.png";
 
 export interface Card {
   id: string;
@@ -21,38 +22,56 @@ const testimonials: Card[] = [
   {
     id: "1",
     content:
-      "NodeFlux absolutely nailed it with our new website. They took the time to understand our brand and target audience, and the result is a stunning, user-friendly platform that perfectly represents our company. Their focus on the little things and the dedication to provide us the absolute best product made the entire experience seamless and exceeded our expectations.",
-    name: "Sarah Lim",
-    designation: "Marketing Executive",
-    rating: 3,
-    avatar: sarah.src,
+      "NodeFlux built us a website that finally feels like our brand. They understood exactly what we wanted and turned it into a clean, easy to use platform that our customers love. The whole process was smooth and the attention to detail was outstanding.",
+    name: "Siah Jayden",
+    designation: "Simon & Tom Singapore",
+    rating: 5,
+    avatar: jaden.src,
   },
   {
     id: "2",
     content:
-      "NodeFlux’s automation services have completely transformed our business. Their team quickly spotted areas where we could boost efficiency and automate all the tedious tasks that were slowing us down. In just three months, we’ve seen incredible results, saving both time and money. Honestly, we couldn’t be happier!",
-    name: "Michael Wong",
-    designation: "Operations Supervisor",
+      "The automation work NodeFlux did for us has been a game changer. They quickly found the slow, repetitive tasks that were eating up our days and automated them. Within a few months we were saving real time and money. We could not be happier with the partnership.",
+    name: "Akash Goda",
+    designation: "Sorab Enterprise",
     rating: 5,
-    avatar: michael.src,
+    avatar: akash.src,
   },
   {
     id: "3",
     content:
-      "We wanted to redesign our mobile app so that it would enhance our customer experience, and NodeFlux was the perfect partner. Their team developed a beautiful and intuitive app that is easy to use and has been very well received.",
-    name: "Jia Xin Lin",
-    designation: "Product Manager",
+      "We needed a system that could keep up with how fast our business moves, and NodeFlux delivered. Their team was responsive, professional, and genuinely invested in getting things right. The results speak for themselves.",
+    name: "Bakul Goda",
+    designation: "Sagar Trading",
     rating: 5,
-    avatar: jiaxin.src,
+    avatar: bakul.src,
   },
   {
     id: "4",
     content:
-      "Nodeflux was amazing at working side by side with us to make sure our website and apps were exactly what our customers needed, with a smooth, hassle-free user experience. We’re super thankful for their partnership and couldn’t be more pleased with the results!",
-    name: "Rageshwaran",
-    designation: "Brand Manager",
+      "NodeFlux redesigned our digital presence and the difference is night and day. The new look is beautiful, intuitive, and has been received really well by our customers. Working with their team was easy from start to finish.",
+    name: "Pinkesh Chauhan",
+    designation: "Supreme Design",
     rating: 5,
-    avatar: ragesh.src,
+    avatar: noprofile.src,
+  },
+  {
+    id: "6",
+    content:
+      "We have engaged the NodeFlux team on two separate projects for Smooder, including the development of our Smoothie Packs website and a warranty portal for our machine business. What stood out was their ability to quickly understand our requirements and recommend practical solutions. Beyond execution, the team was always willing to share ideas and suggest the most suitable approach, often helping us avoid unnecessary features or subscriptions that would increase ongoing costs. The projects were delivered faster than we had expected, and their practical approach helped us achieve our objectives while keeping costs manageable.",
+    name: "Adeline",
+    designation: "Smooder Pte. Ltd.",
+    rating: 5,
+    avatar: noprofile.src,
+  },
+  {
+    id: "5",
+    content:
+      "NodeFlux worked side by side with us to make sure everything fit our needs perfectly. They gave us a smooth, hassle free experience and were always one step ahead. We are grateful for the partnership and thrilled with what they built for us.",
+    name: "Nigel Koh",
+    designation: "Together as 1 (TA1)",
+    rating: 5,
+    avatar: nigel.src,
   },
 ];
 

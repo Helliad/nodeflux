@@ -1,0 +1,262 @@
+---
+import Layout from "@/layouts/layout.astro";
+import Banner from "@/pages/_views/banner.astro";
+import { MaskedHeading } from "@/components/typography/masked-heading";
+import { ArrowLeftIcon, ClockIcon, CalendarIcon } from "lucide-react";
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Do I Need a Mobile App for My Business? An Honest Guide for Singapore SMEs",
+  description:
+    "Most SMEs don't need a native app. They need a responsive site or a PWA. Four questions that decide it, real local examples, and what a Singapore app actually costs to build and maintain.",
+  author: { "@type": "Organization", name: "NodeFlux Pte. Ltd." },
+  publisher: {
+    "@type": "Organization",
+    name: "NodeFlux Pte. Ltd.",
+    logo: { "@type": "ImageObject", url: "https://nodeflux.org/nodeflux.png" },
+  },
+  datePublished: "2026-06-10",
+  dateModified: "2026-06-10",
+  mainEntityOfPage: "https://nodeflux.org/blog/do-i-need-a-mobile-app-singapore",
+};
+---
+
+<Layout
+  title="Do I Need a Mobile App for My Business? An Honest Guide for Singapore SMEs | NodeFlux Pte. Ltd."
+  description="Most SMEs don't need a native app. They need a responsive site or a PWA. Four questions that decide it, real local examples, and what a Singapore app actually costs to build and maintain."
+>
+  <article class="container">
+    <div class="max-w-3xl mx-auto">
+      <a
+        href="/blog"
+        class="inline-flex items-center gap-2 text-sm text-foreground/60 hover:text-foreground transition-colors mb-10"
+      >
+        <ArrowLeftIcon className="h-4 w-4" />
+        <span>Back to the blog</span>
+      </a>
+
+      <div class="flex items-center gap-3 mb-6">
+        <span
+          class="text-[0.625rem] font-bold tracking-wider px-2.5 py-1 rounded-full"
+          style="background-color: #6eaaff; color: #000;"
+        >
+          STRATEGY
+        </span>
+        <div class="inline-flex items-center gap-1.5 text-xs text-foreground/60">
+          <ClockIcon className="h-3.5 w-3.5" />
+          <span>7 min read</span>
+        </div>
+        <div class="inline-flex items-center gap-1.5 text-xs text-foreground/60">
+          <CalendarIcon className="h-3.5 w-3.5" />
+          <span>10 June 2026</span>
+        </div>
+      </div>
+
+      <MaskedHeading className="text-3xl sm:text-4xl lg:text-5xl leading-[1.15] mb-8">
+        Do I Need a Mobile App for My Business? An Honest Guide for Singapore SMEs
+      </MaskedHeading>
+
+      <p class="text-lg text-foreground/75 leading-relaxed mb-12">
+        A competitor launches an app, so you assume you need one too. Then S$30,000 later it sits at 12 downloads.
+        Before you spend a dollar, here is how to know whether your business actually needs a native app, or whether a
+        responsive website or a Progressive Web App would do the same job for a fraction of the cost.
+      </p>
+
+      <div class="article-prose">
+        <h2>The short answer: probably not</h2>
+        <p>
+          For most Singapore SMEs, the honest answer is no, you do not need a native mobile app. What you usually need
+          is a fast, well-built website that works perfectly on a phone, or in some cases a Progressive Web App. A
+          native app is a serious, ongoing commitment, and it only pays off in specific situations. The four questions
+          below will tell you which camp you are in.
+        </p>
+
+        <h2>The four questions that decide it</h2>
+        <p>
+          If you answer yes to most of these, a native app may genuinely be worth it. If you answer no to most, build a
+          great website or a PWA instead and save the money.
+        </p>
+        <ul>
+          <li><strong>1. Do customers open you weekly or more?</strong> Loyalty programs, food ordering, bookings, and daily-use tools justify an app. A service you use once a year does not. People will not keep an app installed for something they touch twice.</li>
+          <li><strong>2. Do you genuinely need device features?</strong> Push notifications, camera, GPS, Bluetooth, or full offline use are real reasons to go native. "It would be nice on the home screen" is not, because a PWA gives you that too.</li>
+          <li><strong>3. Can you afford the upkeep?</strong> A native app is two codebases (iOS and Android) that need constant maintenance. Budget S$300 to S$800 a month, every month, just to keep it working as the operating systems update.</li>
+          <li><strong>4. Is your mobile website already broken?</strong> If your current site is slow or clumsy on a phone, fixing that comes first. An app will not save a business whose web experience is the real problem.</li>
+        </ul>
+
+        <h2>The middle ground: Progressive Web Apps</h2>
+        <p>
+          Most SMEs never hear about the option that fits them best. A
+          <a href="https://web.dev/explore/progressive-web-apps" target="_blank" rel="noopener noreferrer">Progressive Web App (PWA)</a>
+          is a website that behaves like an app. Customers can add it to their home screen, it works offline, and it
+          can send push notifications, all without anyone visiting the App Store. Since Apple began
+          <a href="https://developer.apple.com/documentation/webkit/web-push-for-web-apps-on-ios-and-ipados" target="_blank" rel="noopener noreferrer">supporting web push on iOS</a>,
+          PWAs cover the needs of a large share of businesses that once assumed they had to go native.
+        </p>
+        <p>
+          The cost difference is the headline. A PWA is one codebase, so you typically pay around a third of what a
+          native iOS-plus-Android build costs, and there are no app store review queues to wait on.
+        </p>
+
+        <h2>Real Singapore examples</h2>
+        <ul>
+          <li><strong>F&B with QR ordering.</strong> A cafe that wants diners to scan a code, browse the menu, and pay at the table does not need a native app. A fast web app loads instantly from the QR code with nothing to install. Forcing a download here only loses orders.</li>
+          <li><strong>A clinic or salon with bookings.</strong> A responsive website with online booking handles this beautifully. An app only makes sense once you have a loyal, repeat customer base who would value reminders and saved preferences.</li>
+          <li><strong>A loyalty or delivery business.</strong> If customers interact several times a week and you rely on push notifications to bring them back, this is where a native app earns its keep.</li>
+        </ul>
+
+        <h2>What a native app actually costs in Singapore</h2>
+        <p>
+          Be realistic about the full lifetime cost, not just the build. A genuine minimum viable native app in
+          Singapore typically runs S$8,000 to S$25,000 to build, depending on complexity. That is the start, not the
+          finish:
+        </p>
+        <ul>
+          <li><strong>Build (MVP):</strong> S$8,000 to S$25,000 for a focused first version on iOS and Android.</li>
+          <li><strong>Ongoing maintenance:</strong> S$300 to S$800 a month to handle OS updates, bug fixes, and small changes.</li>
+          <li><strong>Backend and hosting:</strong> servers, databases, and APIs the app talks to, billed monthly.</li>
+        </ul>
+        <p>For how this compares to a website budget, see our <a href="/blog/website-cost-singapore-2026">2026 website pricing breakdown</a>.</p>
+
+        <h2>App Store and Play Store costs in 2026</h2>
+        <p>
+          Publishing is its own line item that people forget. Apple charges a recurring fee through the
+          <a href="https://developer.apple.com/programs/" target="_blank" rel="noopener noreferrer">Apple Developer Program</a>
+          (US$99 a year), while Google's
+          <a href="https://support.google.com/googleplay/android-developer/answer/6112435" target="_blank" rel="noopener noreferrer">Play Console</a>
+          is a one-time US$25 registration. Both stores review every submission, so plan for a few days of approval
+          time and the chance of rejection if guidelines are not met. A PWA skips all of this entirely.
+        </p>
+
+        <h2>A simple decision guide</h2>
+        <div class="not-prose overflow-x-auto my-8">
+          <table>
+            <thead>
+              <tr>
+                <th>Your situation</th>
+                <th>What to build</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Brochure, services, or lead generation</td>
+                <td>Responsive website</td>
+              </tr>
+              <tr>
+                <td>Bookings, ordering, or light recurring use</td>
+                <td>Responsive website or PWA</td>
+              </tr>
+              <tr>
+                <td>Installable, offline, push, used weekly+</td>
+                <td>PWA</td>
+              </tr>
+              <tr>
+                <td>Daily use, deep device features, loyal user base</td>
+                <td>Native app</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>The bottom line</h2>
+        <p>
+          A native app is a powerful tool for the right business and an expensive mistake for the wrong one. Start with
+          the four questions, be honest about whether customers will open it every week, and remember the PWA middle
+          ground exists. If you are still unsure, talk to someone who will tell you the truth even when the truth is
+          "you do not need what you came here to buy."
+        </p>
+      </div>
+
+      <div class="not-prose mt-14 bg-card border rounded-2xl p-8 sm:p-10 flex flex-col items-start gap-4">
+        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#6eaaff]">Free 20-minute consult</p>
+        <h2 class="text-2xl sm:text-3xl font-semibold leading-tight">
+          Not sure if you need an app, a PWA, or just a better website?
+        </h2>
+        <p class="text-foreground/75 max-w-xl">
+          Tell us what your customers actually do, and we will tell you straight which path fits, and which would just
+          burn your budget. No pressure, no jargon. You can also see what we build on our
+          <a href="/services" class="text-[#6eaaff] underline underline-offset-2">services page</a>.
+        </p>
+        <a
+          href="/contact"
+          class="inline-flex items-center gap-2 h-12 px-6 mt-2 rounded-full ring-1 ring-white/15 hover:ring-white/30 hover:bg-white/5 transition-colors font-semibold text-foreground"
+        >
+          <span>Book a consult</span>
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <Banner />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+</Layout>
+
+<style>
+  .article-prose {
+    color: hsl(var(--foreground) / 0.85);
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+  .article-prose h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    color: hsl(var(--foreground));
+  }
+  .article-prose p {
+    margin-bottom: 1.25rem;
+  }
+  .article-prose ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .article-prose li {
+    padding-left: 0.25rem;
+  }
+  .article-prose strong {
+    color: hsl(var(--foreground));
+    font-weight: 600;
+  }
+  .article-prose a {
+    color: #6eaaff;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: opacity 0.2s;
+  }
+  .article-prose a:hover {
+    opacity: 0.8;
+  }
+  .article-prose table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    border: 1px solid hsl(var(--border));
+    border-radius: 0.75rem;
+    overflow: hidden;
+  }
+  .article-prose th,
+  .article-prose td {
+    text-align: left;
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid hsl(var(--border));
+    vertical-align: top;
+  }
+  .article-prose thead th {
+    background-color: hsl(var(--card));
+    font-weight: 600;
+    color: hsl(var(--foreground));
+  }
+  .article-prose tbody tr:last-child td {
+    border-bottom: none;
+  }
+  .article-prose tbody td:nth-child(2) {
+    font-weight: 600;
+    color: hsl(var(--foreground));
+  }
+</style>

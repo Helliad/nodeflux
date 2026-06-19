@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Stars } from "./stars";
 
-import jiaxin from "@/assets/images/review/JiaXin.png";
-import michael from "@/assets/images/review/Michael.png";
-import ragesh from "@/assets/images/review/Rageshwaran.png";
 import jaden from "@/assets/images/review/Jaden.png";
 import nigel from "@/assets/images/review/NigelKoh.png";
+import akash from "@/assets/images/review/akash.jpg";
+import bakul from "@/assets/images/review/bakul.jpg";
+import noprofile from "@/assets/images/review/noprofile.png";
 
 export interface Card {
   id: string;
@@ -35,7 +35,7 @@ const testimonials: Card[] = [
     name: "Akash Goda",
     designation: "Sorab Enterprise",
     rating: 5,
-    avatar: michael.src,
+    avatar: akash.src,
   },
   {
     id: "3",
@@ -44,7 +44,7 @@ const testimonials: Card[] = [
     name: "Bakul Goda",
     designation: "Sagar Trading",
     rating: 5,
-    avatar: ragesh.src,
+    avatar: bakul.src,
   },
   {
     id: "4",
@@ -53,7 +53,16 @@ const testimonials: Card[] = [
     name: "Pinkesh Chauhan",
     designation: "Supreme Design",
     rating: 5,
-    avatar: jiaxin.src,
+    avatar: noprofile.src,
+  },
+  {
+    id: "6",
+    content:
+      "We have engaged the NodeFlux team on two separate projects for Smooder, including the development of our Smoothie Packs website and a warranty portal for our machine business. What stood out was their ability to quickly understand our requirements and recommend practical solutions. Beyond execution, the team was always willing to share ideas and suggest the most suitable approach, often helping us avoid unnecessary features or subscriptions that would increase ongoing costs. The projects were delivered faster than we had expected, and their practical approach helped us achieve our objectives while keeping costs manageable.",
+    name: "Adeline",
+    designation: "Smooder Pte. Ltd.",
+    rating: 5,
+    avatar: noprofile.src,
   },
   {
     id: "5",

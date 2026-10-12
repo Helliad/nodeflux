@@ -90,6 +90,8 @@ Most SMEs assume "we need an app" because a competitor has one, then spend S$30K
 **Target length:** ~1,500 words
 **Target reading time:** 7 min
 
+> **Update, 12 October 2026:** PSG, EDG and MRA closed to new applications on 29 September 2026 and were replaced by the EDGE Grant. The published article keeps this slug but is written around that change: "PSG Grant for Websites in Singapore Has Ended. Here Is What the EDGE Grant Covers". NodeFlux is not a pre-approved vendor, and the article says so. The outline below describes the old scheme, so do not lift grant facts from it.
+
 ### Why this article
 "PSG grant website" is a high-intent search. Anyone typing it is ready to spend money. Ranking here puts NodeFlux in front of pre-qualified buyers. Most existing articles are outdated (2022/2023 figures) or written by grant consultancies pushing their service.
 

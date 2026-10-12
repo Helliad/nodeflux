@@ -3,7 +3,7 @@ import Layout from "@/layouts/layout.astro";
 import { MaskedHeading } from "@/components/typography/masked-heading";
 ---
 
-<Layout title="I would like to share this with you" description="">
+<Layout title="I would like to share this with you" description="" noindex>
   <div class="container mx-auto">
     <div class="flex flex-col items-center mb-10">
       <MaskedHeading
@@ -94,7 +94,6 @@ import { MaskedHeading } from "@/components/typography/masked-heading";
         <h2 class="text-xl font-semibold">Terms and Conditions</h2>
         <p class="text-sm">The referral program is subject to the following terms:</p>
         <ul class="list-disc pl-6 mt-2 text-sm">
-          <li>This offer is valid for 1 year from 16-Sep-2024 to 15-Sep-2025.</li>
           <li>Referral rewards are applicable only after successful referral and completion of client's project.</li>
           <li>Rewards will be given within 30 days of final payment confirmation from referred clients.</li>
           <li>NodeFlux Pte. Ltd. reserves the right to amend or terminate this offer at any time without prior notice.</li>

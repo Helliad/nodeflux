@@ -7,5 +7,11 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: "https://nodeflux.org/",
-  integrations: [react(), tailwind({ applyBaseStyles: false }), lottie(), sitemap()],
+  trailingSlash: "always",
+  integrations: [
+    react(),
+    tailwind({ applyBaseStyles: false }),
+    lottie(),
+    sitemap({ filter: (page) => !page.includes("/referral/") }),
+  ],
 });

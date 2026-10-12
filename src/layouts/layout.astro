@@ -7,14 +7,30 @@ import Footer from "@/layouts/footer.astro";
 interface Props {
   title: string;
   description: string;
+  type?: "website" | "article";
+  noindex?: boolean;
 }
 
-const markup = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
+const business = {
+  "@type": "ProfessionalService",
+  "@id": "https://nodeflux.org/#business",
   name: "NodeFlux Pte. Ltd.",
-  url: "https://nodeflux.org",
+  alternateName: "NodeFlux",
+  description: "Singapore web and app development company building custom websites, web applications and mobile apps for SMEs.",
+  url: "https://nodeflux.org/",
   logo: "https://nodeflux.org/nodeflux.png",
+  image: "https://nodeflux.org/nodeflux.png",
+  telephone: "+65 9087 0875",
+  email: "inquiries@nodeflux.org",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "112 Middle Road #03-01, Midland House",
+    addressLocality: "Singapore",
+    postalCode: "188970",
+    addressCountry: "SG",
+  },
+  areaServed: { "@type": "Country", name: "Singapore" },
+  founder: { "@type": "Person", name: "Abhay Bagdawala" },
   sameAs: [
     "https://www.linkedin.com/company/nodefluxsg",
     "https://www.facebook.com/people/NodeFlux-Pte-Ltd/61565335343560/",
@@ -22,7 +38,22 @@ const markup = {
   ],
 };
 
-const { title, description } = Astro.props;
+const website = {
+  "@type": "WebSite",
+  "@id": "https://nodeflux.org/#website",
+  name: "NodeFlux",
+  alternateName: "NodeFlux Pte. Ltd.",
+  url: "https://nodeflux.org/",
+  publisher: { "@id": "https://nodeflux.org/#business" },
+};
+
+const { title, description, type = "website", noindex = false } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+
+const markup = {
+  "@context": "https://schema.org",
+  "@graph": Astro.url.pathname === "/" ? [business, website] : [business],
+};
 ---
 
 <!doctype html>
@@ -32,10 +63,14 @@ const { title, description } = Astro.props;
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
-    <meta property="og:title" content="Digital Consultancy | NodeFlux SG" />
-    <meta property="og:description" content="Discover our customer-centric solutions and how we can help your company." />
+    {noindex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonical} />}
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content="NodeFlux Pte. Ltd." />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
     <meta property="og:image" content="https://nodeflux.org/nodeflux.png" />
-    <meta property="og:url" content="https://nodeflux.org" />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

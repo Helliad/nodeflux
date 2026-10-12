@@ -5,7 +5,7 @@ import { MaskedHeading } from "@/components/typography/masked-heading";
 <section id="pricing" class="mt-48">
   <div class="container">
     <div class="flex flex-col gap-3 max-w-xl mx-auto">
-      <MaskedHeading className="leading-[1.15]">Our Packages</MaskedHeading>
+      <MaskedHeading as="h2" className="leading-[1.15]">Our Packages</MaskedHeading>
       <p class="text-xl text-foreground/75 text-center">Our bundled services which we will tailor to your needs</p>
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl mt-16 mx-auto">
@@ -32,7 +32,7 @@ import { MaskedHeading } from "@/components/typography/masked-heading";
         <div class="h-px shrink-0 bg-border mt-auto"></div>
         <div class="relative group/button w-full mt-8">
           <div class="absolute transition-all duration-150 opacity-0 inset-px bg-[#45c463] rounded-xl blur-lg group-hover/button:opacity-60 group-hover/button:-inset-px group-hover/button:duration-300 z-0"></div>
-          <a href="/contact"><button class="h-12 inline-flex items-center justify-center px-10 py-2 bg-[#45c463] font-medium rounded-full text-background relative z-10 w-full">Get Started</button></a>
+          <a href="/contact/"><button class="h-12 inline-flex items-center justify-center px-10 py-2 bg-[#45c463] font-medium rounded-full text-background relative z-10 w-full">Get Started</button></a>
         </div>
       </article>
       <article class="bg-card rounded-xl border px-8 py-7 flex flex-col">
@@ -61,7 +61,7 @@ import { MaskedHeading } from "@/components/typography/masked-heading";
         <div class="h-px shrink-0 bg-border mt-auto"></div>
         <div class="relative group/button w-full mt-8">
           <div class="absolute transition-all duration-150 opacity-0 inset-px bg-[#6eaaff] rounded-xl blur-lg group-hover/button:opacity-60 group-hover/button:-inset-px group-hover/button:duration-300 z-0"></div>
-          <a href="/contact"><button class="h-12 inline-flex items-center justify-center px-10 py-2 bg-[#6eaaff] font-medium rounded-full text-background relative z-10 w-full">Get Started</button></a>
+          <a href="/contact/"><button class="h-12 inline-flex items-center justify-center px-10 py-2 bg-[#6eaaff] font-medium rounded-full text-background relative z-10 w-full">Get Started</button></a>
         </div>
       </article>
       <article class="bg-card rounded-xl border px-8 py-7 flex flex-col">
@@ -87,9 +87,19 @@ import { MaskedHeading } from "@/components/typography/masked-heading";
         <div class="h-px shrink-0 bg-border mt-auto"></div>
         <div class="relative group/button w-full mt-8">
           <div class="absolute transition-all duration-150 opacity-0 inset-px bg-[#B73DFC] rounded-xl blur-lg group-hover/button:opacity-60 group-hover/button:-inset-px group-hover/button:duration-300 z-0"></div>
-          <a href="/contact"><button class="h-12 inline-flex items-center justify-center px-10 py-2 bg-[#B73DFC] font-medium rounded-full text-background relative z-10 w-full">Get Started</button></a>
+          <a href="/contact/"><button class="h-12 inline-flex items-center justify-center px-10 py-2 bg-[#B73DFC] font-medium rounded-full text-background relative z-10 w-full">Get Started</button></a>
         </div>
       </article>
+    </div>
+    <div class="max-w-6xl mx-auto mt-6 bg-card rounded-xl border px-8 py-7">
+      <p class="font-semibold">Not sure which package fits?</p>
+      <p class="text-sm text-foreground/60 mt-1.5">These guides answer the questions business owners ask us before a project starts.</p>
+      <ul class="mt-5 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 text-sm">
+        <li><a href="/blog/website-cost-singapore-2026/" class="text-[#6eaaff] underline underline-offset-2">How much does a website cost in Singapore in 2026?</a></li>
+        <li><a href="/blog/do-i-need-a-mobile-app-singapore/" class="text-[#6eaaff] underline underline-offset-2">Do I need a mobile app for my business?</a></li>
+        <li><a href="/blog/psg-grant-website-singapore-2026/" class="text-[#6eaaff] underline underline-offset-2">PSG has ended. What does the EDGE Grant cover?</a></li>
+        <li><a href="/free-website-audit/" class="text-[#6eaaff] underline underline-offset-2">Get a free audit of your current website</a></li>
+      </ul>
     </div>
   </div>
 </section>

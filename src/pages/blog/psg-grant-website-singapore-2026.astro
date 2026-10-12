@@ -1,0 +1,305 @@
+---
+import Layout from "@/layouts/layout.astro";
+import Banner from "@/pages/_views/banner.astro";
+import { MaskedHeading } from "@/components/typography/masked-heading";
+import { ArrowLeftIcon, ClockIcon, CalendarIcon } from "lucide-react";
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "PSG Grant for Websites in Singapore Has Ended. Here Is What the EDGE Grant Covers",
+  description:
+    "PSG closed to new applications on 29 September 2026. What the EDGE Grant that replaced it covers, who qualifies, and whether it can pay for your website.",
+  author: { "@type": "Organization", name: "NodeFlux Pte. Ltd." },
+  publisher: {
+    "@type": "Organization",
+    name: "NodeFlux Pte. Ltd.",
+    logo: { "@type": "ImageObject", url: "https://nodeflux.org/nodeflux.png" },
+  },
+  datePublished: "2026-10-12",
+  dateModified: "2026-10-12",
+  mainEntityOfPage: "https://nodeflux.org/blog/psg-grant-website-singapore-2026/",
+};
+---
+
+<Layout
+  type="article"
+  title="PSG Grant for Websites Ended in 2026: EDGE Grant Guide | NodeFlux Pte. Ltd."
+  description="PSG closed to new applications on 29 September 2026. What the EDGE Grant that replaced it covers, who qualifies, and whether it can pay for your website."
+>
+  <article class="container">
+    <div class="max-w-3xl mx-auto">
+      <a
+        href="/blog/"
+        class="inline-flex items-center gap-2 text-sm text-foreground/60 hover:text-foreground transition-colors mb-10"
+      >
+        <ArrowLeftIcon className="h-4 w-4" />
+        <span>Back to the blog</span>
+      </a>
+
+      <div class="flex items-center gap-3 mb-6">
+        <span
+          class="text-[0.625rem] font-bold tracking-wider px-2.5 py-1 rounded-full"
+          style="background-color: #B73DFC; color: #000;"
+        >
+          GRANTS
+        </span>
+        <div class="inline-flex items-center gap-1.5 text-xs text-foreground/60">
+          <ClockIcon className="h-3.5 w-3.5" />
+          <span>6 min read</span>
+        </div>
+        <div class="inline-flex items-center gap-1.5 text-xs text-foreground/60">
+          <CalendarIcon className="h-3.5 w-3.5" />
+          <span>12 October 2026</span>
+        </div>
+      </div>
+
+      <MaskedHeading className="text-3xl sm:text-4xl lg:text-5xl leading-[1.15] mb-8">
+        PSG Grant for Websites in Singapore Has Ended. Here Is What the EDGE Grant Covers
+      </MaskedHeading>
+
+      <p class="text-lg text-foreground/75 leading-relaxed mb-12">
+        If you searched for the PSG grant to help pay for a website, here is the first thing to know: PSG stopped
+        taking new applications on 29 September 2026. Most of what you will find online still describes the old
+        scheme. This is what replaced it, what it means for a website budget, and where a custom build fits. We are
+        not a pre-approved grant vendor, so we have nothing to sell you on the grant side.
+      </p>
+
+      <div class="article-prose">
+        <h2>The short answer</h2>
+        <p>
+          The Productivity Solutions Grant (PSG), together with EDG and MRA, ceased on 29 September 2026. Since 30
+          September 2026, Enterprise Singapore funds new projects through one scheme, the
+          <a href="https://www.enterprisesg.gov.sg/financial-support/edge-grant" target="_blank" rel="noopener noreferrer">EDGE Grant</a>.
+          For digital projects, EDGE supports SMEs at up to 50% of qualifying costs. But it only pays for pre-approved
+          digital solutions from listed vendors. A custom website from a developer who is not on that list is not
+          claimable.
+        </p>
+
+        <h2>What happened to PSG</h2>
+        <p>
+          Enterprise Singapore's
+          <a href="https://www.enterprisesg.gov.sg/financial-support/productivity-solutions-grant" target="_blank" rel="noopener noreferrer">PSG page</a>
+          now carries a notice that EDG, MRA and PSG ceased on 29 September 2026. If you submitted a PSG application
+          before that date, it is still assessed under the old rules, and you can claim through the Business Grants
+          Portal once the project is complete. No new PSG applications are accepted.
+        </p>
+
+        <h2>The EDGE Grant at a glance</h2>
+        <div class="not-prose overflow-x-auto my-8">
+          <table>
+            <thead>
+              <tr>
+                <th>What</th>
+                <th>The rule</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Support level</td>
+                <td>Up to 50% of qualifying costs for SMEs. Up to 70% for internationalisation and sustainability activities.</td>
+              </tr>
+              <tr>
+                <td>Yearly cap</td>
+                <td>S$100,000 per company across all activities, refreshed on 1 April each year.</td>
+              </tr>
+              <tr>
+                <td>Digital sub-cap</td>
+                <td>Up to S$30,000 of that for digital solutions, enterprise systems and pre-scoped equipment.</td>
+              </tr>
+              <tr>
+                <td>How it pays</td>
+                <td>Reimbursement. One final claim after you have paid in full.</td>
+              </tr>
+              <tr>
+                <td>Where to apply</td>
+                <td>The Business Grants Portal, using Corppass.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          These figures come from Enterprise Singapore's EDGE Grant page and its
+          <a href="https://www.enterprisesg.gov.sg/resources/all-faqs/edge-grant" target="_blank" rel="noopener noreferrer">EDGE Grant FAQ</a>,
+          as published on 12 October 2026.
+        </p>
+
+        <h2>Who is eligible</h2>
+        <ul>
+          <li><strong>Registered and operating in Singapore.</strong> EDGE only supports Singapore-registered business entities.</li>
+          <li><strong>At least 30% local ownership.</strong> The business must be at least 30% owned by Singaporeans or Singapore PRs.</li>
+          <li><strong>SME size for the higher support level.</strong> Group annual sales turnover of not more than S$100 million, or group employment of not more than 200 workers. Larger companies can still apply, at up to 30%.</li>
+          <li><strong>Not a home-based business.</strong> This applies to the digital solutions we checked, and the solution has to be used in Singapore.</li>
+          <li><strong>No earlier grant for the same solution.</strong> You cannot be funded twice for the same thing.</li>
+        </ul>
+        <p>
+          Criteria differ by activity, so read the page for the specific activity before you apply.
+        </p>
+
+        <h2>Can the EDGE Grant pay for a website?</h2>
+        <p>
+          This is where most people get caught out. EDGE funds digital projects as pre-approved solutions built for a
+          specific function. You pick the vendor and the package from the list on
+          <a href="https://www.imda.gov.sg/how-we-can-help/smes-go-digital" target="_blank" rel="noopener noreferrer">IMDA's SMEs Go Digital platform</a>,
+          and your grant application has to match that package exactly.
+        </p>
+        <p>That has two consequences for a website:</p>
+        <ul>
+          <li><strong>You cannot bring your own developer.</strong> If the vendor is not on the pre-approved list, the build is not claimable through this route, however good the quote is.</li>
+          <li><strong>The grant pays for the packaged solution, not everything around it.</strong> On the solution pages we checked, the supported cost is the software, capped at 12 months. GST and maintenance are excluded.</li>
+        </ul>
+        <p>
+          So the useful question is not "can I get a grant for my website" but "is there a pre-approved package that
+          does what I need". Search the SMEs Go Digital list first. If a package fits, the subsidy is real money and
+          you should take it. If nothing fits, you are paying full price either way, so choose the developer on merit.
+        </p>
+
+        <h2>Four rules that catch people out</h2>
+        <ul>
+          <li><strong>Apply before you spend anything.</strong> Retrospective applications are not supported. If work has started, or you have paid any deposit, before you submit, the application is out.</li>
+          <li><strong>You pay first.</strong> The grant is a reimbursement. You pay the vendor in full, then claim. There are no cash advances, and EDGE accepts only a single, final claim.</li>
+          <li><strong>You apply yourself.</strong> Applications go through the Business Grants Portal with your own Corppass. Vendors and third parties cannot submit for you.</li>
+          <li><strong>You cannot swap vendors after approval.</strong> If you change your mind, the application has to be terminated and submitted again.</li>
+        </ul>
+
+        <h2>How to apply, step by step</h2>
+        <ol>
+          <li>Find a pre-approved vendor and solution on SMEs Go Digital.</li>
+          <li>Get a quotation from that vendor.</li>
+          <li>Build a solution package on SMEs Go Digital that matches the quotation exactly, and confirm it with Corppass to get a package reference ID.</li>
+          <li>Apply on the <a href="https://www.businessgrants.gov.sg/" target="_blank" rel="noopener noreferrer">Business Grants Portal</a>.</li>
+          <li>If you are approved, accept the Letter of Offer.</li>
+          <li>Complete the project and pay the vendor in full.</li>
+          <li>Submit your claim on the portal. Claims for digital solutions open from 1 November 2026.</li>
+        </ol>
+        <p>
+          On timing, the digital solution pages we checked quote an application outcome in about one week, and the
+          project has to be finished within 18 months of approval. Once a claim is approved, payment takes about 14
+          working days by PayNow Corporate, or up to eight weeks by GIRO.
+        </p>
+
+        <h2>Where NodeFlux fits</h2>
+        <p>
+          We will say it plainly. NodeFlux is not a pre-approved vendor, so a website or app built by us cannot be
+          claimed under the EDGE Grant's digital solutions route. We would rather you hear that from us now than find
+          out after you have signed.
+        </p>
+        <p>
+          If a pre-approved package covers what you need, use it and take the subsidy. If you need something built
+          around how your business works, compare quotes at full price. Our own pricing is on our
+          <a href="/services/#pricing">services page</a>, and our
+          <a href="/blog/website-cost-singapore-2026/">website cost guide</a> explains what a fair quote should
+          include.
+        </p>
+
+        <h2>The bottom line</h2>
+        <p>
+          PSG is closed. The EDGE Grant can cover up to half the cost of a pre-approved digital solution, but it does
+          not fund a custom website from any developer you like. Check the pre-approved list first, never pay a
+          deposit before you apply, and plan your cashflow around being reimbursed later.
+        </p>
+        <p>
+          Grant rules change. Everything here reflects Enterprise Singapore's published pages as of 12 October 2026,
+          so confirm the details on the
+          <a href="https://www.enterprisesg.gov.sg/financial-support/edge-grant" target="_blank" rel="noopener noreferrer">official EDGE Grant page</a>
+          before you apply.
+        </p>
+      </div>
+
+      <div class="not-prose mt-14 bg-card border rounded-2xl p-8 sm:p-10 flex flex-col items-start gap-4">
+        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#B73DFC]">Free 20-minute consult</p>
+        <h2 class="text-2xl sm:text-3xl font-semibold leading-tight">
+          Not sure whether to go for a grant package or a custom build?
+        </h2>
+        <p class="text-foreground/75 max-w-xl">
+          Tell us what you need the site to do. We will tell you straight whether an off-the-shelf package would cover
+          it, or what a custom build would cost in SGD.
+        </p>
+        <a
+          href="/contact/"
+          class="inline-flex items-center gap-2 h-12 px-6 mt-2 rounded-full ring-1 ring-white/15 hover:ring-white/30 hover:bg-white/5 transition-colors font-semibold text-foreground"
+        >
+          <span>Book a consult</span>
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <Banner />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+</Layout>
+
+<style>
+  .article-prose {
+    color: hsl(var(--foreground) / 0.85);
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+  .article-prose h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    color: hsl(var(--foreground));
+  }
+  .article-prose p {
+    margin-bottom: 1.25rem;
+  }
+  .article-prose ul,
+  .article-prose ol {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .article-prose ol {
+    list-style: decimal;
+  }
+  .article-prose li {
+    padding-left: 0.25rem;
+  }
+  .article-prose strong {
+    color: hsl(var(--foreground));
+    font-weight: 600;
+  }
+  .article-prose a {
+    color: #6eaaff;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: opacity 0.2s;
+  }
+  .article-prose a:hover {
+    opacity: 0.8;
+  }
+  .article-prose table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    border: 1px solid hsl(var(--border));
+    border-radius: 0.75rem;
+    overflow: hidden;
+  }
+  .article-prose th,
+  .article-prose td {
+    text-align: left;
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid hsl(var(--border));
+    vertical-align: top;
+  }
+  .article-prose thead th {
+    background-color: hsl(var(--card));
+    font-weight: 600;
+    color: hsl(var(--foreground));
+  }
+  .article-prose tbody tr:last-child td {
+    border-bottom: none;
+  }
+  .article-prose tbody td:first-child {
+    font-weight: 600;
+    color: hsl(var(--foreground));
+    white-space: nowrap;
+  }
+</style>

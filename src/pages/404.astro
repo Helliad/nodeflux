@@ -1,0 +1,44 @@
+---
+import Layout from "@/layouts/layout.astro";
+import { MaskedHeading } from "@/components/typography/masked-heading";
+
+const links = [
+  { label: "Home", href: "/" },
+  { label: "Our Services", href: "/services/" },
+  { label: "Blog", href: "/blog/" },
+  { label: "Contact Us", href: "/contact/" },
+];
+---
+
+<Layout
+  title="Page Not Found | NodeFlux Pte. Ltd."
+  description="This page doesn't exist. Head back to the NodeFlux homepage or get in touch with us."
+  noindex
+>
+  <section id="not-found">
+    <div class="container">
+      <div class="flex flex-col items-center max-w-3xl mx-auto">
+        <MaskedHeading className="animate-slide-in opacity-0 text-4xl sm:text-5xl lg:text-6xl leading-[1.1]">
+          This page doesn't exist.
+        </MaskedHeading>
+        <p
+          class="animate-slide-in [--slide-in-delay:75ms] opacity-0 text-foreground/75 text-center text-lg font-normal mt-10"
+        >
+          The link may be old, or the page may have moved. One of these should get you where you were going.
+        </p>
+        <nav class="animate-slide-in [--slide-in-delay:150ms] opacity-0 flex flex-wrap items-center justify-center gap-4 mt-10">
+          {
+            links.map((link) => (
+              <a
+                href={link.href}
+                class="inline-flex items-center h-12 px-6 rounded-full ring-1 ring-white/15 hover:ring-white/30 hover:bg-white/5 transition-colors font-semibold text-foreground"
+              >
+                {link.label}
+              </a>
+            ))
+          }
+        </nav>
+      </div>
+    </div>
+  </section>
+</Layout>

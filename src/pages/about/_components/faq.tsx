@@ -23,7 +23,7 @@ const faqs = [
     description: (
       <p>
         Absolutely! We have a portfolio of case studies and success stories that showcase our expertise and the impact of our solutions. You can view these on&nbsp;
-        <a href="/services#projects" className="text-primary underline underline-offset-1">
+        <a href="/services/#projects" className="text-primary underline underline-offset-1">
           our website
         </a>
         &nbsp;or request specific examples via the contact us form.

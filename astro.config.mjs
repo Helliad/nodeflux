@@ -1,3 +1,4 @@
+import { fileURLToPath } from "node:url";
 import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
 import lottie from "astro-integration-lottie";
@@ -14,4 +15,10 @@ export default defineConfig({
     lottie(),
     sitemap({ filter: (page) => !page.includes("/referral/") }),
   ],
+  // Astro 4 only reads tsconfig "paths" when "baseUrl" is set, so the "@/" alias is declared here instead.
+  vite: {
+    resolve: {
+      alias: { "@": fileURLToPath(new URL("./src", import.meta.url)) },
+    },
+  },
 });

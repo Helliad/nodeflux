@@ -1,23 +1,26 @@
 ---
 import { MaskedHeading } from "@/components/typography/masked-heading";
 
-import support from '@/assets/images/home/support.png'
-import vision from '@/assets/images/home/vision.png'
-import magic from '@/assets/images/home/magic.png'
+import support from '@/assets/images/home/support.webp'
+import vision from '@/assets/images/home/vision.webp'
+import magic from '@/assets/images/home/magic.webp'
 
 const steps = [
   {
     image: vision.src,
+    alt: "Hands sketching website wireframes in a notebook",
     title: "Tell us your vision",
     description: "We prioritize understanding your vision and needs, to create tailor-made, transformative solutions for impactful results.",
   },
   {
     image: magic.src,
+    alt: "A finished website shown on a laptop and a phone",
     title: "Receive the magic",
     description: "With our commitment to creativity, precision, and dedication to your success, we ensure the delivery of exceptional products that exceeds expectations.",
   },  
   {
     image: support.src,
+    alt: "Developer at a desk monitoring a site dashboard",
     title: "Access continuous support",
     description: "To ensure sustained performance and longevity of our solutions, we provide maintenance and support services with regular updates.",
   },
@@ -32,7 +35,7 @@ const steps = [
         steps.map((step) => (
           <article class="flex flex-col gap-8">
             <div class="group/cover overflow-hidden rounded-3xl w-full">
-              <img src={step.image} alt="Step Images"class="w-full h-auto transition-transform group-hover/cover:scale-110" />
+              <img src={step.image} alt={step.alt} class="w-full h-auto transition-transform group-hover/cover:scale-110" />
             </div>
             <div class="flex flex-col gap-4">
               <h3 class="text-2xl font-semibold">{step.title}</h3>
